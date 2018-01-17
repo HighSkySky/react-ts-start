@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --progress --config ./config/webpack.dev.js"
+    "dev": "webpack-dev-server --progress --config ./config/webpack.dev.js",
+    "build": "webpack --config ./config/webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,7 @@
   "homepage": "https://github.com/HighSkySky/react-ts-start#readme",
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-hot-loader": "^4.0.0-beta.14",
-    "webpack": "^3.10.0"
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "@types/react": "^16.0.34",
@@ -32,10 +31,22 @@
     "awesome-typescript-loader": "^3.4.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.3.1",
+    "css-loader": "^0.28.8",
+    "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.30.1",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "react-hot-loader": "^4.0.0-beta.14",
     "source-map-loader": "^0.2.3",
+    "style-loader": "^0.19.1",
     "typescript": "^2.6.2",
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.0",
-    "webpack-merge": "^4.1.1"
+    "webpack-merge": "^4.1.1",
+    "webpack-visualizer-plugin": "^0.1.11"
   }
 }
