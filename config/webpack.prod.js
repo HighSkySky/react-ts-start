@@ -15,7 +15,7 @@ function resolve (dir) {
 
 module.exports = merge(common, {
   entry: {
-    main: resolve('/src/index.tsx'), //入口文件
+    main: resolve('/src/entry-prod.tsx'), //入口文件
     vendor: ['react', 'react-dom'], //分离第三方库
   },
   output: {

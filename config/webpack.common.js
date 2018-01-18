@@ -34,11 +34,21 @@ module.exports = {
         loader: 'source-map-loader'
       },
       {
-        test: /\.(less|css)$/,
+        test: /\.css$/,
+        exclude: /node_modules/,
         use: [
-          'style-loader',
-          { loader: 'css-loader', options: { importLoaders: 1 } },
-          'less-loader'
+            {
+                loader: 'style-loader',
+            },
+            {
+                loader: 'css-loader',
+                options: {
+                    importLoaders: 1,
+                }
+            },
+            {
+                loader: 'postcss-loader'
+            }
         ]
       },
       {

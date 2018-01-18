@@ -3,7 +3,6 @@ const path = require('path');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-let FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -12,7 +11,7 @@ function resolve (dir) {
 module.exports = merge(common, {
   entry: [
     'react-hot-loader/patch',
-    './src/index.tsx',
+    './src/entry-dev.tsx',
   ],
   output: {
     filename: 'bundle.js', // 打包后的文件名
